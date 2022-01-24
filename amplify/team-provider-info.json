@@ -1,0 +1,16 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ubercloned-dev-202315-authRole",
+      "UnauthRoleArn": "arn:aws:iam::318561699163:role/amplify-ubercloned-dev-202315-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::318561699163:role/amplify-ubercloned-dev-202315-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ubercloned-dev-202315-deployment",
+      "UnauthRoleName": "amplify-ubercloned-dev-202315-unauthRole",
+      "StackName": "amplify-ubercloned-dev-202315",
+      "StackId": "arn:aws:cloudformation:us-east-1:318561699163:stack/amplify-ubercloned-dev-202315/a71f63f0-767b-11ec-9e87-12552e5f43ef",
+      "AmplifyAppId": "dw07j0i45xq15",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-ubercloned-dev-202315-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  }
+}

@@ -1,11 +1,10 @@
-import { StyleSheet } from 'react-native';
-import { Dimensions } from 'react-native';
-
+import {StyleSheet} from 'react-native';
+import {Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   map: {
-    height: Dimensions.get('window').height - 76, 
-    width: '100%'
+    height: Dimensions.get('window').height - 76,
+    width: '100%',
   },
   bottomContainer: {
     height: 100,
@@ -17,9 +16,9 @@ const styles = StyleSheet.create({
     padding: 13,
   },
   bottomText: {
-    color: "#0b06af",
+    color: '#0c04ec',
     fontSize: 23,
-    fontWeight: '700'
+    fontWeight: '700',
   },
   balanceBtn: {
     position: 'absolute',
@@ -28,19 +27,19 @@ const styles = StyleSheet.create({
     padding: 9,
     paddingHorizontal: 26,
     top: 14,
-    left: 144
+    left: 144,
   },
   balanceText: {
-    color: '#0b06af',
+    color: '#0c04ec',
     fontSize: 19,
-    fontWeight: '900'
+    fontWeight: '900',
   },
   roundBtn: {
     position: 'absolute',
-    backgroundColor: "black",
+    backgroundColor: 'black',
     color: 'black',
     padding: 11,
-    borderRadius: 22
+    borderRadius: 22,
   },
   textGo: {
     position: 'absolute',
@@ -51,8 +50,8 @@ const styles = StyleSheet.create({
     padding: 27,
     borderRadius: 54,
     bottom: -3,
-    left: -207
-  }
+    left: -207,
+  },
 });
 
 export default styles;
