@@ -23,7 +23,7 @@ const NewOrderPopup = ({newOrder, onAccept, onDecline}) => {
 
           <Text style={styles.uberType}>
             <AntDesign name="star" size={17} />
-            {newOrder.user.rating}
+            {newOrder.user?.rating ? newOrder.user.rating : 3.1}
           </Text>
         </View>
 
