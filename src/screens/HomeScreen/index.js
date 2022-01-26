@@ -136,7 +136,7 @@ const HomeScreen = () => {
     }
   };
 
-  const onAccept = newOrder => {
+  const onAccept = async newOrder => {
     try {
       const input = {
         id: newOrder.id,
@@ -221,7 +221,11 @@ const HomeScreen = () => {
 
   const fetchOrders = async () => {
     try {
-      const ordersData = await API.graphql(graphqlOperation(listOrders));
+      const ordersData = await API.graphql(
+        graphqlOperation(listOrders, {
+          filter: {status: {eq: 'NEW'}},
+        }),
+      );
       setNewOrders(ordersData.data.listOrders.items);
     } catch (e) {
       console.error(e);
