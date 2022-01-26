@@ -3,7 +3,7 @@ import {View, Text, Pressable} from 'react-native';
 
 import {Auth, API, graphqlOperation} from 'aws-amplify';
 import {getCar} from '../../graphql/queries';
-import {updateCar} from '../../graphql/mutations';
+import {updateCar, updateOrder} from '../../graphql/mutations';
 import {listOrders} from '../../graphql/queries';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -137,7 +137,21 @@ const HomeScreen = () => {
   };
 
   const onAccept = newOrder => {
-    setOrder(newOrder);
+    try {
+      const input = {
+        id: newOrder.id,
+        status: 'PICKING_UP_CLIENT',
+        carId: car.id,
+      };
+
+      const orderData = await API.graphql(
+        graphqlOperation(updateOrder, {input}),
+      );
+      setOrder(orderData.data.updateOrder);
+    } catch (e) {
+      console.error('update order Error', e);
+    }
+
     setNewOrders(newOrders.slice(1));
   };
 
